@@ -1,0 +1,44 @@
+import random
+
+comp_itens = ['pedra','tesoura','papel']
+new = 's'
+
+while new == 's':
+    usr_chc = input('Digite sua escolha (Papel, Tesoura ou Pedra): ').lower()
+    
+    if usr_chc == 'pedra' or usr_chc == 'papel' or usr_chc == 'tesoura':
+        comp_chc = random.choice(comp_itens)
+        
+        if usr_chc == 'pedra' and comp_chc == 'papel':
+            print ('Você escolheu', usr_chc, 'e o Computador escolheu', comp_chc+'.')
+            print('O Computador ganhou.')
+
+        elif usr_chc == 'pedra' and comp_chc == 'tesoura':
+            print ('Você escolheu', usr_chc, 'e o Computador escolheu', comp_chc+'.')
+            print('Você ganhou! Parabéns!')
+
+        elif usr_chc == 'papel' and comp_chc == 'pedra':
+            print ('Você escolheu', usr_chc, 'e o Computador escolheu', comp_chc+'.')
+            print('Você ganhou! Parabéns!')
+
+        elif usr_chc == 'papel' and comp_chc == 'tesoura':
+            print ('Você escolheu', usr_chc, 'e o Computador escolheu', comp_chc+'.')
+            print('O Computador ganhou.')
+
+        elif usr_chc == 'tesoura' and comp_chc == 'papel':
+            print ('Você escolheu', usr_chc, 'e o Computador escolheu', comp_chc+'.')
+            print('Você ganhou! Parabéns!')
+
+        elif usr_chc == 'tesoura' and comp_chc == 'pedra':
+            print ('Você escolheu', usr_chc, 'e o Computador escolheu', comp_chc+'.')
+            print('O Computador ganhou.')
+
+        else:
+            print ('Você escolheu', usr_chc, 'e o Computador escolheu', comp_chc+'.')
+            print('Você e o Computador empataram.')
+            
+        new = input('Gostaria de jogar novamente? (s/n): ').lower()
+
+    else:
+        print('Palavra inválida. Escolha uma das palavras Papel, Tesoura ou Pedra.')
+        new = 's'
